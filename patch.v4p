@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
   <PATCH>
-  <BOUNDS type="Window" width="28800" height="14820">
+  <BOUNDS type="Window" width="19995" height="14820">
   </BOUNDS>
   <NODE id="3" nodename="Renderer (EX9)" systemname="Renderer (EX9)" componentmode="Hidden">
   <BOUNDS type="Node" left="4440" top="12495" width="100" height="100">
@@ -29,7 +29,7 @@
   </PIN>
   </NODE>
   <NODE id="17" nodename="./Camera_Touch.v4p" systemname="./Camera_Touch" filename="./Camera_Touch.v4p" componentmode="Hidden">
-  <BOUNDS type="Node" left="5370" top="11265" width="100" height="100">
+  <BOUNDS type="Node" left="8490" top="9645" width="100" height="100">
   </BOUNDS>
   <PIN pinname="Initial Distance" visible="1" values="|2|">
   </PIN>
@@ -265,11 +265,11 @@
   </PIN>
   </NODE>
   <NODE id="116" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)" componentmode="Hidden">
-  <BOUNDS type="Node" left="5010" top="6540" width="100" height="100">
+  <BOUNDS type="Node" left="10260" top="2790" width="100" height="100">
   </BOUNDS>
   <PIN pinname="Transform In" visible="1">
   </PIN>
-  <PIN pinname="XYZ" visible="1" values="|1|">
+  <PIN pinname="XYZ" visible="1" values="|0.1|">
   </PIN>
   <PIN pinname="Descriptive Name" visible="0" values="||">
   </PIN>
@@ -323,7 +323,7 @@
   </PIN>
   </NODE>
   <NODE id="123" nodename="Translate (Transform)" systemname="Translate (Transform)" componentmode="Hidden">
-  <BOUNDS type="Node" left="4860" top="6015" width="100" height="100">
+  <BOUNDS type="Node" left="10035" top="2145" width="100" height="100">
   </BOUNDS>
   <PIN pinname="Transform In" visible="1">
   </PIN>
@@ -445,7 +445,7 @@
   </PIN>
   <PIN pinname="u BaseColorFactor" visible="1">
   </PIN>
-  <PIN pinname="u Camera" visible="1">
+  <PIN pinname="u Camera" visible="1" values="|0.05633654631674288|,|-1.6717353165149684|,|1.235580787062645|">
   </PIN>
   <PIN pinname="u ScaleDiffBaseMR" visible="1" values="|0|">
   </PIN>
@@ -466,14 +466,106 @@
   <PIN pinname="Descriptive Name" visible="0" values="||">
   </PIN>
   </NODE>
-  <LINK srcnodeid="17" srcpinname="ResolutionX" dstnodeid="3" dstpinname="Backbuffer Width">
-  </LINK>
-  <LINK srcnodeid="17" srcpinname="ResolutionY" dstnodeid="3" dstpinname="Backbuffer Height">
-  </LINK>
-  <LINK srcnodeid="17" srcpinname="Projection" dstnodeid="3" dstpinname="Projection">
-  </LINK>
-  <LINK srcnodeid="17" srcpinname="View" dstnodeid="3" dstpinname="View">
-  </LINK>
+  <NODE id="155" nodename="ScreenInfo (Windows)" systemname="ScreenInfo (Windows)" componentmode="Hidden">
+  <BOUNDS type="Node" left="5115" top="9450" width="100" height="100">
+  </BOUNDS>
+  <PIN pinname="Descriptive Name" visible="0" values="||">
+  </PIN>
+  </NODE>
+  <NODE id="156" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)" componentmode="Hidden">
+  <BOUNDS type="Node" left="4755" top="10440" width="100" height="100">
+  </BOUNDS>
+  <PIN pinname="Input" visible="1">
+  </PIN>
+  <PIN pinname="Bin Size" visible="1">
+  </PIN>
+  <PIN pinname="Index" visible="1">
+  </PIN>
+  <PIN pinname="Descriptive Name" visible="0" values="||">
+  </PIN>
+  </NODE>
+  <NODE id="157" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)" componentmode="Hidden">
+  <BOUNDS type="Node" left="6120" top="10425" width="100" height="100">
+  </BOUNDS>
+  <PIN pinname="Input" visible="1">
+  </PIN>
+  <PIN pinname="Bin Size" visible="1">
+  </PIN>
+  <PIN pinname="Index" visible="1" values="|1|">
+  </PIN>
+  <PIN pinname="Descriptive Name" visible="0" values="||">
+  </PIN>
+  </NODE>
+  <NODE id="158" nodename="Perspective (Transform)" systemname="Perspective (Transform)" componentmode="Hidden">
+  <BOUNDS type="Node" left="6960" top="11910" width="100" height="100">
+  </BOUNDS>
+  <PIN pinname="Transform In" visible="1">
+  </PIN>
+  <PIN pinname="FOV" visible="1">
+  </PIN>
+  <PIN pinname="Near Plane" visible="1">
+  </PIN>
+  <PIN pinname="Far Plane" visible="1">
+  </PIN>
+  <PIN pinname="Descriptive Name" visible="0" values="||">
+  </PIN>
+  </NODE>
+  <NODE id="160" nodename="Translate (Transform)" systemname="Translate (Transform)" componentmode="Hidden">
+  <BOUNDS type="Node" left="6600" top="10995" width="100" height="100">
+  </BOUNDS>
+  <PIN pinname="Transform In" visible="1">
+  </PIN>
+  <PIN pinname="X" visible="1">
+  </PIN>
+  <PIN pinname="Y" visible="1">
+  </PIN>
+  <PIN pinname="Z" visible="1" values="|1|">
+  </PIN>
+  <PIN pinname="Descriptive Name" visible="0" values="||">
+  </PIN>
+  </NODE>
+  <NODE id="161" nodename="Rotate (Transform)" systemname="Rotate (Transform)" componentmode="Hidden">
+  <BOUNDS type="Node" left="9555" top="1515" width="100" height="100">
+  </BOUNDS>
+  <PIN pinname="Transform In" visible="1">
+  </PIN>
+  <PIN pinname="X" visible="1" values="|0|">
+  </PIN>
+  <PIN pinname="Y" visible="1">
+  </PIN>
+  <PIN pinname="Z" visible="1">
+  </PIN>
+  <PIN pinname="Descriptive Name" visible="0" values="||">
+  </PIN>
+  </NODE>
+  <NODE id="162" nodename="LFO (Animation)" systemname="LFO (Animation)" componentmode="Hidden">
+  <BOUNDS type="Node" left="9690" top="855" width="100" height="100">
+  </BOUNDS>
+  <PIN pinname="Period" visible="1" values="|30|">
+  </PIN>
+  <PIN pinname="Pause" visible="1">
+  </PIN>
+  <PIN pinname="Reverse" visible="1">
+  </PIN>
+  <PIN pinname="Reset" visible="1">
+  </PIN>
+  <PIN pinname="Phase" visible="1">
+  </PIN>
+  <PIN pinname="Descriptive Name" visible="0" values="||">
+  </PIN>
+  </NODE>
+  <NODE id="164" nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox">
+  <BOUNDS type="Box" left="2805" top="1965" width="0" height="0">
+  </BOUNDS>
+  <PIN pinname="SliceOffset" visible="1">
+  </PIN>
+  <PIN pinname="Input String" visible="1" values="|glTF/axolotl.gltf|">
+  </PIN>
+  <PIN pinname="Rows" visible="0" values="|1|">
+  </PIN>
+  <PIN pinname="Descriptive Name" visible="0" values="||">
+  </PIN>
+  </NODE>
   <LINK srcnodeid="18" srcpinname="Texture Out" dstnodeid="19" dstpinname="skybox">
   </LINK>
   <LINK srcnodeid="21" srcpinname="Mesh" dstnodeid="19" dstpinname="Mesh">
@@ -532,10 +624,6 @@
   </LINK>
   <LINK srcnodeid="152" srcpinname="XYZW" dstnodeid="154" dstpinname="u BaseColorFactor">
   </LINK>
-  <LINK srcnodeid="17" srcpinname="Camera Position" dstnodeid="154" dstpinname="u Camera">
-  </LINK>
-  <LINK srcnodeid="122" srcpinname="Output String" dstnodeid="120" dstpinname="Input 2">
-  </LINK>
   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="3" dstpinname="Layers">
   </LINK>
   <LINK srcnodeid="154" srcpinname="Layer" dstnodeid="20" dstpinname="Layer 1">
@@ -549,5 +637,23 @@
   <LINK srcnodeid="124" srcpinname="Metallic Roughness Texture" dstnodeid="154" dstpinname="u MetallicRoughnessSampler">
   </LINK>
   <LINK srcnodeid="124" srcpinname="Occlusion Texture" dstnodeid="154" dstpinname="u OcclusionSampler">
+  </LINK>
+  <LINK srcnodeid="155" srcpinname="ResolutionXY" dstnodeid="156" dstpinname="Input">
+  </LINK>
+  <LINK srcnodeid="156" srcpinname="Output" dstnodeid="3" dstpinname="Backbuffer Width">
+  </LINK>
+  <LINK srcnodeid="155" srcpinname="ResolutionXY" dstnodeid="157" dstpinname="Input">
+  </LINK>
+  <LINK srcnodeid="157" srcpinname="Output" dstnodeid="3" dstpinname="Backbuffer Height">
+  </LINK>
+  <LINK srcnodeid="160" srcpinname="Transform Out" dstnodeid="3" dstpinname="View">
+  </LINK>
+  <LINK srcnodeid="161" srcpinname="Transform Out" dstnodeid="123" dstpinname="Transform In">
+  </LINK>
+  <LINK srcnodeid="162" srcpinname="Output" dstnodeid="161" dstpinname="Y">
+  </LINK>
+  <LINK srcnodeid="158" srcpinname="Transform Out" dstnodeid="3" dstpinname="Projection">
+  </LINK>
+  <LINK srcnodeid="164" srcpinname="Output String" dstnodeid="120" dstpinname="Input 2">
   </LINK>
   </PATCH>
